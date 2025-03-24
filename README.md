@@ -100,9 +100,9 @@
 
 <details>
 <summary>게시판 페이지 구현 시안 </summary>
-  <img src="이미지주소"  width="700" height="400"/>
-
-- Spring Security의  권한이 admin일때만 관리자페이지에 접속 가능
+  <img src="![게시판1](https://github.com/user-attachments/assets/76528a6e-8bb4-456a-aa63-5fdb54425b2a)
+"  width="700" height="400"/>
+- 로그인 필요 없이 접속 가능
 
   <br>
 
