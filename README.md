@@ -156,11 +156,12 @@
 <br>
 <br>
 
-### ✔ 강사소개 구현 ✔
+### ✔ Review 구현 ✔
 <details>
-<summary>강사 소개 페이지 시연 영상</summary>
+<summary>Review 페이지 시연 영상</summary>
 
-![강사 소개](이미지주소)
+![리뷰1](https://github.com/user-attachments/assets/9a7887da-eca8-4454-8fc6-c8f740b666b0)
+
 
 </details>
 <details>
@@ -178,11 +179,28 @@
 <br>
 <br>
 
-### ✔ INDEX 애니메이션 기능 구현 ✔
+### ✔ ChatRoom 구현 ✔
 <details>
-<summary>INDEX 애니메이션 기능 시연 영상</summary>
+<summary>ChatRoom 시연 영상</summary>
 
-영상주소
+![채팅방2](https://github.com/user-attachments/assets/3b8c8fd4-b0a8-4b53-ad1a-d0694dcc0b3d)
+
+
+</details>
+<details>
+&nbsp;<summary>INDEX 애니메이션 기능 시안 설명</summary>
+
+  <img src="이미지주소"  width="700" height="400"/>
+</details>
+<br>
+<br>
+
+### ✔ Security(JWT) 구현 ✔
+<details>
+<summary>Security(JWT) 시연 영상</summary>
+
+![JWT](https://github.com/user-attachments/assets/24e0317d-f9fb-4e08-8a53-beb38fa425fb)
+
 
 </details>
 <details>
