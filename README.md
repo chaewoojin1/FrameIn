@@ -173,7 +173,7 @@
 
 <details>
 <summary>게시글 작성 페이지 구현 시안 </summary>
-<img src="https://github.com/user-attachments/assets/3a30e266-3c1a-4658-8283-b12a483c7e4d"  width="700" height="400"/>
+<img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="700" height="400"/>
 
 - 게시글 작성 핸들러
 
@@ -214,7 +214,7 @@
 </details>
 <details>
 <summary>게시글 수정 페이지 구현 시안 </summary>
-<img src="https://github.com/user-attachments/assets/6c82fa4e-e6d7-4937-9ec9-78dc617f5531"  width="700" height="400"/>
+<img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="700" height="400"/>
 
 - 게시글 데이터 미리 입력
 
@@ -349,14 +349,180 @@ const handleSubmit = async (e) => {
     }
 }
 ```
+- 게시글 삭제 핸들러
+```
+const handleDelete = async () => {
+    try {
+      await jwtAxios.post(`http://localhost:8090/board/delete/${id}`);
+      navigate("/board");
+    } catch (err) {
+      console.error("게시글 삭제 실패", err);
+      alert("게시글 삭제에 실패했습니다.");
+    }
+  };
+```
+
+</details>
+
+<details>
+<summary>게시글 댓글 구현 시안 </summary>
+<img src="https://github.com/user-attachments/assets/3bdafa01-2e98-4c25-920c-b15a485b6da1"  width="700" height="400"/>
+
+- 댓글 추가
+```
+ const handleSubmit = async (e) => {
+    if (!loginState.email) {
+      // email이 없으면 로그인 페이지로 이동
+      navigate("/member/login");
+      return; // 이후 로직을 실행하지 않도록 종료
+    }
+    e.preventDefault();
+
+    const requestData = {
+      boardId: id,
+      replyContent: content,
+      email: loginState.email,
+    };
+
+    try {
+      const response = await jwtAxios.post(
+        "http://localhost:8090/api/reply/write",
+        requestData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const replyListResponse = await axios.get(
+        `http://localhost:8090/api/reply/replyList/${id}`
+      );
+      const sortedReplies = replyListResponse.data.replyList || [];
+      sortedReplies.sort(
+        (a, b) => new Date(b.createTime) - new Date(a.createTime)
+      ); // `createdAt`을 기준으로 정렬
+
+      setReplies(sortedReplies);
+      setContent("");
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+```
+- 댓글 삭제 
+```
+const replyDelete = async () => {
+    if (!replyToDelete) return;
+    try {
+      await jwtAxios.post(
+        `http://localhost:8090/api/reply/delete/${replyToDelete.id}/${id}`
+      );
+      const replyListResponse = await axios.get(
+        `http://localhost:8090/api/reply/replyList/${id}`
+      );
+      const sortedReplies = replyListResponse.data.replyList || [];
+      sortedReplies.sort(
+        (a, b) => new Date(b.createTime) - new Date(a.createTime)
+      ); // `createdAt`을 기준으로 정렬
+
+      setReplies(sortedReplies);
+      closeReplyDeleteModal();
+    } catch (err) {
+      console.error("댓글 삭제 실패", err);
+      alert("댓글 삭제에 실패했습니다.");
+    }
+  };
+```
+- 좋아요 기능
+```
+const handleLike = async (replyId) => {
+    if (!loginState.email) {
+      // email이 없으면 로그인 페이지로 이동
+      navigate("/member/login");
+      return; // 이후 로직을 실행하지 않도록 종료
+    }
+    const reply = replies.find((r) => r.id === replyId);
+
+    // 사용자가 이미 좋아요를 눌렀다면, unlike 요청을 보냄
+    if (
+      reply.replyLikeEntities.some((like) => like.email === loginState.email)
+    ) {
+      try {
+        await jwtAxios.post(
+          `http://localhost:8090/api/reply/unlike?replyId=${replyId}&email=${loginState.email}`
+        );
+
+        // 서버에서 좋아요 취소 성공 후, UI 상태 업데이트
+        setReplies((prevReplies) =>
+          prevReplies.map((r) =>
+            r.id === replyId
+              ? {
+                  ...r,
+                  replyLikeEntities: r.replyLikeEntities.filter(
+                    (like) => like.email !== loginState.email
+                  ),
+                }
+              : r
+          )
+        );
+        const replyListResponse = await axios.get(
+          `http://localhost:8090/api/reply/replyList/${id}`
+        );
+        const sortedReplies = replyListResponse.data.replyList || [];
+        sortedReplies.sort(
+          (a, b) => new Date(b.createTime) - new Date(a.createTime)
+        ); // `createdAt`을 기준으로 정렬
+
+        setReplies(sortedReplies);
+      } catch (err) {
+        console.error("좋아요 취소 실패", err);
+        alert("좋아요 취소에 실패했습니다.");
+      }
+    } else {
+      // 좋아요가 눌리지 않은 상태라면, like 요청을 보냄
+      try {
+        await jwtAxios.post(
+          `http://localhost:8090/api/reply/like?replyId=${replyId}&email=${loginState.email}`
+        );
+
+        // 서버에서 좋아요 추가 성공 후, UI 상태 업데이트
+        setReplies((prevReplies) =>
+          prevReplies.map((r) =>
+            r.id === replyId
+              ? {
+                  ...r,
+                  replyLikeEntities: [
+                    ...r.replyLikeEntities,
+                    { email: loginState.email },
+                  ],
+                }
+              : r
+          )
+        );
+
+        const replyListResponse = await axios.get(
+          `http://localhost:8090/api/reply/replyList/${id}`
+        );
+        const sortedReplies = replyListResponse.data.replyList || [];
+        sortedReplies.sort(
+          (a, b) => new Date(b.createTime) - new Date(a.createTime)
+        ); // `createdAt`을 기준으로 정렬
+
+        setReplies(sortedReplies);
+      } catch (err) {
+        console.error("좋아요 실패", err);
+        alert("좋아요 처리에 실패했습니다.");
+      }
+    }
+  };
+```
 </details>
 <br>
-
 ### ✔ Chatbot 구현 ✔
 <details>
 <summary>Chatbot 구현 시연 영상</summary>
-
 ![chatBot](https://github.com/user-attachments/assets/fe60f6bd-6635-4dc0-97f2-3b7bed38385e)
+
 
 
 
