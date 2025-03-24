@@ -139,7 +139,7 @@ https://github.com/user-attachments/assets/3cd37ab8-6e69-413e-ba6a-3b178669abe1
 - 공감 버튼(공감 누른 사용자 확인 가능)
 - 중복 리뷰 작성 불가능
 - 본인 댓글,ADMIN만 리뷰 삭제 가능
-
+- 공감순,최신순 버튼(기본 최신순이며 공감개수가 같을시 더 최신 댓글이 위에서 부터 정렬)
 
 </details>
 
