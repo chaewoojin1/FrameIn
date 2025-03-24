@@ -104,7 +104,7 @@
 
 ## ⭐프로젝트 시안
 
-### ✔ 게시판 페이지 구현 ✔
+### 🔧 게시판 페이지 구현 
 <details>
 <summary>게시판 페이지 구현 시연 </summary>
 
@@ -125,7 +125,7 @@ https://github.com/user-attachments/assets/c551c904-4374-4239-af67-aeda5f1f5a16
 
 <br>
 
-### ✔ Chatbot 구현 ✔
+### 🔧 Chatbot 구현 
 <details>
 <summary>Chatbot 기능 시연 </summary>
   
@@ -143,7 +143,7 @@ https://github.com/user-attachments/assets/ae579b70-872b-4846-99b8-60ed7b7efe55
 
 <br>
 
-### ✔ Review 구현 ✔
+### 🔧 Review 구현 
 <details>
 <summary>Review 페이지 시연 영상</summary>
 
@@ -161,7 +161,7 @@ https://github.com/user-attachments/assets/3cd37ab8-6e69-413e-ba6a-3b178669abe1
 
 <br>
 
-### ✔ ChatRoom 구현 ✔
+### 🔧 ChatRoom 구현 
 <details>
 <summary>ChatRoom 시연 </summary>
 
@@ -179,7 +179,7 @@ https://github.com/user-attachments/assets/188e2580-7c05-41a4-94aa-42508064fe9c
 
 <br>
 
-### ✔ Security 구현 ✔
+### 🔧 Security 구현 
 <details>
 <summary>Security(JWT) 시연 </summary>
 
