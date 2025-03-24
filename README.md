@@ -107,7 +107,7 @@ https://github.com/user-attachments/assets/c551c904-4374-4239-af67-aeda5f1f5a16
 - 댓글개수,조회수,파일여부 확인 가능
 </details>
 
-
+<br>
 
 ### ✔ Chatbot 구현 ✔
 <details>
@@ -148,30 +148,32 @@ https://github.com/user-attachments/assets/3cd37ab8-6e69-413e-ba6a-3b178669abe1
 
 ### ✔ ChatRoom 구현 ✔
 <details>
-<summary>ChatRoom 시연 영상</summary>
+<summary>ChatRoom 시연 </summary>
 
-![채팅방2](https://github.com/user-attachments/assets/3b8c8fd4-b0a8-4b53-ad1a-d0694dcc0b3d)
 
+
+https://github.com/user-attachments/assets/188e2580-7c05-41a4-94aa-42508064fe9c
+
+- 로그인 되어있어야 접속 가능
+- WebSocket을 사용한 실시간 양방향 채팅 서비스
+- 로그아웃, 새로고침 해도 채팅 내역 남아있도록 Local Storage에 채팅내역 저장(ADMIN만 삭제 가능)
+- 본인 채팅 내역 확인 가능(Data Base에 저장)
+- 비속어 사용시 자동으로 필터링(Data Base에 필터링 없이 저장)
 
 </details>
-<details>
-&nbsp;<summary>INDEX 애니메이션 기능 시안 설명</summary>
 
-  <img src="이미지주소"  width="700" height="400"/>
-</details>
-<br>
 <br>
 
 ### ✔ Security 구현 ✔
 <details>
-<summary>Security(JWT) 시연 영상</summary>
+<summary>Security(JWT) 시연 </summary>
 
-![JWT](https://github.com/user-attachments/assets/24e0317d-f9fb-4e08-8a53-beb38fa425fb)
 
+https://github.com/user-attachments/assets/6c54345f-afbc-4cd7-8990-984334ae61fe
+
+- 로그인시 LoginSuccessHandler에서 AccessToken,RefreshToken 발급 -> 쿠키에 저장 -> 백 서버에 데이터 요청시 쿠키에 저장된 AccessToken을 검증
+- AccessToken은 탈취당할 위험이 있어 유지기간이 짧음-> AccessToken이 만료된 경우 RefreshToken을 검증하여 AccessToken을 재발급
+- JwtAxios 사용
 
 </details>
-<details>
-&nbsp;<summary>INDEX 애니메이션 기능 시안 설명</summary>
 
-  <img src="이미지주소"  width="700" height="400"/>
-</details>
