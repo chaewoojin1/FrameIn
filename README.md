@@ -126,7 +126,8 @@
 <details>
 <summary>Chatbot 구현 시연 영상</summary>
 
-![chatBot](https://github.com/user-attachments/assets/21c935b2-0586-48aa-94b9-b57575471a79)
+![chatBot](https://github.com/user-attachments/assets/fe60f6bd-6635-4dc0-97f2-3b7bed38385e)
+
 
 
 
