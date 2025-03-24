@@ -175,6 +175,180 @@
 <summary>게시글 작성 페이지 구현 시안 </summary>
 <img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="700" height="400"/>
 
+- 게시글 작성 핸들러
+
+```
+// 폼 제출 처리 함수
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // FormData 객체 생성
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("content", content);
+    formData.append("category", category); // 카테고리 추가
+    formData.append("email", loginState.email); // Redux에서 이메일 가져오기
+    if (itemFile) {
+      formData.append("itemFile", itemFile);
+    }
+
+    try {
+      // 서버로 데이터 전송 (Content-Type을 명시하지 않음)
+      const response = await jwtAxios.post(
+        "http://localhost:8090/board/insert",
+        formData,
+        {
+          // "Content-Type"을 명시하지 않으면 브라우저가 자동으로 multipart/form-data로 설정해줌
+        }
+      );
+      // 성공 메시지 처리
+      setMessage(response.data);
+    } catch (error) {
+      // 에러 처리
+      setMessage("아이템 추가에 실패했습니다.");
+      console.error("Error:", error);
+    }
+    navigate("/board");
+  };
+```
+</details>
+<details>
+<summary>게시글 수정 페이지 구현 시안 </summary>
+<img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="700" height="400"/>
+
+- 게시글 데이터 미리 입력
+
+```
+useEffect(() => {
+    if (id) {
+      const fetchBoardDetail = async () => {
+        try {
+          const response = await jwtAxios.get(
+            `http://localhost:8090/board/detail/${id}`
+          );
+          setTitle(response.data.title);
+          setCategory(response.data.category);
+          setContent(response.data.content);
+          setItemFile(response.data.itemFile); // If there's an existing file
+          setOriginFileName(response.data.itemFile);
+          setLoading(false);
+        } catch (err) {
+          console.error("게시글 상세 정보 불러오기 실패", err);
+          setError("게시글 상세 정보를 불러오는 데 실패했습니다.");
+          setLoading(false);
+        }
+      };
+      fetchBoardDetail();
+    } else {
+      setLoading(false); // If there's no id, stop loading
+    }
+  }, [id]);
+```
+
+- 게시글 수정 핸들러
+
+```
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Prepare FormData
+    const formData = new FormData();
+    formData.append("id", id);
+    formData.append("title", title);
+    formData.append("content", content);
+    formData.append("category", category);
+    formData.append("email", loginState.email); // Email from login state
+    if (itemFile) {
+      formData.append("itemFile", itemFile); // Add the file if any
+    }formData.append("originFileName", originFileName);
+
+    try {
+      // Send data to the server (Content-Type handled automatically by FormData)
+      const response = await jwtAxios.post(
+        "http://localhost:8090/board/update",
+        formData
+      );
+      setMessage(response.data);
+    } catch (error) {
+      setMessage("게시글 수정에 실패했습니다.");
+      console.error("Error:", error);
+    }
+    navigate("/board");
+  };
+```
+- Update 파일 처리
+```
+   @Override public void boardUpdate(BoardDto boardDto) throws IOException {
+    // 1. 게시글 확인
+    Optional<BoardEntity> optionalBoardEntity = boardRepository.findById(boardDto.getId());
+    if (!optionalBoardEntity.isPresent()) {
+        throw new IllegalArgumentException("Fail!-> 상품 !");
+    }
+    
+    // 2. 파일 체크
+    Optional<BoardImgEntity> optionalBoardImgEntity = 
+        boardImgRepository.findByBoardEntity(BoardEntity.builder().id(boardDto.getId()).build());
+    
+    if (optionalBoardImgEntity.isPresent()) {
+        String newImgName = optionalBoardImgEntity.get().getNewImgName();
+        String saveFilePath = "E:/saveFiles/" + newImgName; // 로컬 저장이름
+        File deleteFile = new File(saveFilePath);
+        if (deleteFile.exists()) {
+            deleteFile.delete(); // 파일 삭제 -> 로컬 파일 삭제
+            System.out.println("파일을 삭제하였습니다.");
+        } else {
+            System.out.println("파일이 존재하지 않습니다.");
+        }
+        // DB파일 삭제
+        boardImgRepository.deleteById(optionalBoardImgEntity.get().getId());
+    }
+
+    // 3. 게시글 수정
+    Optional<MemberEntity> optionalMemberEntity = memberRepository.findByEmail(boardDto.getEmail());
+    if (!optionalMemberEntity.isPresent()) {
+        throw new IllegalArgumentException("Fail -> 회원아이디!");
+    }
+
+    // 파일이 없을 경우와 있을 경우에 따라 처리
+    MultipartFile itemFile = boardDto.getItemFile(); // 파일을 받음
+
+    // 파일이 null이거나 비어있으면 게시글만 수정
+    if (itemFile == null || itemFile.isEmpty()) {
+        BoardEntity boardEntity = BoardEntity.toUpdateBoardEntity(boardDto);
+        boardRepository.save(boardEntity);
+        System.out.println("파일 없이 게시글만 수정되었습니다.");
+    } else {
+        // 파일이 있을 경우에는 새로 저장
+        String oldImgName = itemFile.getOriginalFilename(); // 원본이미지명
+        System.out.println("원본이미지: " + oldImgName);
+        UUID uuid = UUID.randomUUID();
+        String newImgName = uuid + "_" + oldImgName;
+        System.out.println("newImgName: " + newImgName);
+        String saveFilePath = "E:/saveFiles/" + newImgName; // 로컬 저장이름
+        itemFile.transferTo(new File(saveFilePath)); // 로컬 저장
+
+        // 게시글 정보 업데이트
+        BoardEntity boardEntity = BoardEntity.toUpdateFileBoardEntity(boardDto);
+        Long itemId = boardRepository.save(boardEntity).getId();
+        
+        // 상품 이미지 정보 저장 (이미지 테이블)
+        Optional<BoardEntity> optionalBoardEntity2 = boardRepository.findById(itemId);
+        if (!optionalBoardEntity2.isPresent()) {
+            throw new IllegalArgumentException("Fail!-> 상품 !");
+        }
+        
+        BoardImgDto boardImgDto = BoardImgDto.builder()
+            .newImgName(newImgName)
+            .oldImgName(oldImgName)
+            .boardEntity(optionalBoardEntity2.get())
+            .build();
+        
+        BoardImgEntity boardImgEntity = BoardImgEntity.toBoardImgEntity(boardImgDto);
+        Long boardId2 = boardImgRepository.save(boardImgEntity).getId();
+        updateHit(boardId2); // 조회수 업데이트
+    }
+}
+```
 </details>
 <br>
 
