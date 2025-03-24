@@ -102,7 +102,7 @@
 <summary>게시판 페이지 구현 시안 </summary>
 <img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="700" height="400"/>
 
-- 로그인 필요 없이 접속 가능
+- 카테고리 필터링 기능
 ```
  // 카테고리 버튼 클릭 시 카테고리 필터링
   const handleCategoryFilter = (category) => {
@@ -125,7 +125,52 @@
     setCurrentPage(1); // 카테고리 필터링 후 첫 페이지로 이동
   };
 ```
--카테고리 필터링 기능
+- 검색 기능
+```
+// 검색 버튼 클릭 시 필터링된 게시글 리스트 설정
+  const handleSearch = () => {
+    const filteredList = boardList.filter((board) => {
+      switch (searchOption) {
+        case "title":
+          return board.title.toLowerCase().includes(searchQuery.toLowerCase());
+        case "content":
+          return board.content
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase());
+        case "nickname":
+          return board.memberNickName.toLowerCase().includes(searchQuery.toLowerCase());
+        default:
+          return true;
+      }
+    });
+
+```
+- 페이징 처리
+  ```
+   const indexOfLastMessage = currentPage * messagesPerPage;
+  const indexOfFirstMessage = indexOfLastMessage - messagesPerPage;
+  const currentMessages =
+    filteredBoardList.slice(indexOfFirstMessage, indexOfLastMessage) || [];
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const totalMessages = filteredBoardList.length || 0;
+  const totalPages = Math.ceil(totalMessages / messagesPerPage);
+
+  const getPaginationRange = () => {
+    const pageLimit = 5;
+    const rangeStart =
+      Math.floor((currentPage - 1) / pageLimit) * pageLimit + 1;
+    const rangeEnd = Math.min(rangeStart + pageLimit - 1, totalPages);
+    return { rangeStart, rangeEnd };
+  };
+
+  const { rangeStart, rangeEnd } = getPaginationRange();
+  ```
+  
+
   <br>
 
 
