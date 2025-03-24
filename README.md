@@ -72,7 +72,7 @@
 </details>
 
 <details>
-<summary> 타임라인</summary>
+<summary>타임라인</summary>
 
 ![Image](https://github.com/user-attachments/assets/bff463eb-d34f-4a3a-b847-57b2873b754a)
 
@@ -97,14 +97,14 @@
 https://github.com/user-attachments/assets/c551c904-4374-4239-af67-aeda5f1f5a16
 
 
-- 로그인되어 있을 경우 본인 게시글 업로드,수정,삭제 가능
-- 공지사항은 ADMIN만 작성 가능
-- 카테고리 클릭시 카테고리에 맞는 게시글 리스트 정렬(기본적으로 최신순)
-- 검색기능, 페이징 처리
-- 댓글 추가
-- 좋아요 기능(좋아요 누른 사용자 확인 가능)
-- 파일 처리
-- 댓글개수,조회수,파일여부 확인 가능
+◼ 로그인되어 있을 경우 본인 게시글 업로드,수정,삭제 가능
+◼ 공지사항은 ADMIN만 작성 가능
+◼ 카테고리 클릭시 카테고리에 맞는 게시글 리스트 정렬(기본적으로 최신순)
+◼ 검색기능, 페이징 처리
+◼ 댓글 추가
+◼ 좋아요 기능(좋아요 누른 사용자 확인 가능)
+◼ 파일 처리
+◼ 댓글개수,조회수,파일여부 확인 가능
 </details>
 
 <br>
@@ -116,11 +116,11 @@ https://github.com/user-attachments/assets/c551c904-4374-4239-af67-aeda5f1f5a16
 https://github.com/user-attachments/assets/ae579b70-872b-4846-99b8-60ed7b7efe55
 
 
-- Komoran을 사용한 챗봇 서비스
-- 영화 정보,영화관 위치 정보,도움말 제공
-  <br>
-* 사용자의 입력 문장에서 Komoran으로 명사를 추출, Data Base에서 추출한 명사가 포함된 정보를 제공
-* 예)추출한 명사에 영화가 있을 경우 MovieEntity에서 다음 명사가 포함된 데이터를 찾아 제공
+◼ Komoran을 사용한 챗봇 서비스
+◼ 영화 정보,영화관 위치 정보,도움말 제공
+  
+◼ 사용자의 입력 문장에서 Komoran으로 명사를 추출, Data Base에서 추출한 명사가 포함된 정보를 제공
+◻ 예)추출한 명사에 영화가 있을 경우 MovieEntity에서 다음 명사가 포함된 데이터를 찾아 제공
 
 
 </details>
@@ -135,12 +135,12 @@ https://github.com/user-attachments/assets/ae579b70-872b-4846-99b8-60ed7b7efe55
 
 https://github.com/user-attachments/assets/3cd37ab8-6e69-413e-ba6a-3b178669abe1
 
-- 로그인 안되어 있을 시 리뷰 입력창 대신 로그인 하러 가기 링크
-- 평점 추가
-- 공감 버튼(공감 누른 사용자 확인 가능)
-- 중복 리뷰 작성 불가능
-- 본인 댓글,ADMIN만 리뷰 삭제 가능
-- 공감순,최신순 버튼(기본 최신순이며 공감개수가 같을시 더 최신 댓글이 위에서 부터 정렬)
+◼ 로그인 안되어 있을 시 리뷰 입력창 대신 로그인 하러 가기 링크
+◼ 평점 추가
+◼ 공감 버튼(공감 누른 사용자 확인 가능)
+◼ 중복 리뷰 작성 불가능
+◼ 본인 댓글,ADMIN만 리뷰 삭제 가능
+◼ 공감순,최신순 버튼(기본 최신순이며 공감개수가 같을시 더 최신 댓글이 위에서 부터 정렬)
 
 </details>
 
@@ -154,11 +154,11 @@ https://github.com/user-attachments/assets/3cd37ab8-6e69-413e-ba6a-3b178669abe1
 
 https://github.com/user-attachments/assets/188e2580-7c05-41a4-94aa-42508064fe9c
 
-- 로그인 되어있어야 접속 가능
-- WebSocket을 사용한 실시간 양방향 채팅 서비스
-- 로그아웃, 새로고침 해도 채팅 내역 남아있도록 Local Storage에 채팅내역 저장(ADMIN만 삭제 가능)
-- 본인 채팅 내역 확인 가능(Data Base에 저장)
-- 비속어 사용시 자동으로 필터링(Data Base에 필터링 없이 저장)
+◼ 로그인 되어있어야 접속 가능
+◼ WebSocket을 사용한 실시간 양방향 채팅 서비스
+◼ 로그아웃, 새로고침 해도 채팅 내역 남아있도록 Local Storage에 채팅내역 저장(ADMIN만 삭제 가능)
+◼ 본인 채팅 내역 확인 가능(Data Base에 저장)
+◼ 비속어 사용시 자동으로 필터링(Data Base에 필터링 없이 저장)
 
 </details>
 
@@ -171,9 +171,9 @@ https://github.com/user-attachments/assets/188e2580-7c05-41a4-94aa-42508064fe9c
 
 https://github.com/user-attachments/assets/6c54345f-afbc-4cd7-8990-984334ae61fe
 
-- 로그인시 LoginSuccessHandler에서 AccessToken,RefreshToken 발급 -> 쿠키에 저장 -> 백 서버에 데이터 요청시 쿠키에 저장된 AccessToken을 검증
-- AccessToken은 탈취당할 위험이 있어 유지기간이 짧음-> AccessToken이 만료된 경우 RefreshToken을 검증하여 AccessToken을 재발급
-- JwtAxios 사용
+◼ 로그인시 LoginSuccessHandler에서 AccessToken,RefreshToken 발급 -> 쿠키에 저장 -> 백 서버에 데이터 요청시 쿠키에 저장된 AccessToken을 검증
+◼ AccessToken은 탈취당할 위험이 있어 유지기간이 짧음-> AccessToken이 만료된 경우 RefreshToken을 검증하여 AccessToken을 재발급
+◼ JwtAxios 사용
 
 </details>
 
