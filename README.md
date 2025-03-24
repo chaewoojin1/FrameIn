@@ -103,7 +103,29 @@
 <img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="700" height="400"/>
 
 - 로그인 필요 없이 접속 가능
+```
+ // 카테고리 버튼 클릭 시 카테고리 필터링
+  const handleCategoryFilter = (category) => {
+    setSelectedCategory(category);
+    let filtered = [];
+    if (category === "all") {
+      filtered = boardList; // 모든 게시글을 다시 표시
+    } else {
+      filtered = boardList.filter((board) => board.category === category);
+    }
 
+    // 게시글을 createTime 또는 updateTime을 기준으로 최신순으로 정렬
+    filtered.sort((a, b) => {
+      const timeA = a.updateTime || a.createTime;
+      const timeB = b.updateTime || b.createTime;
+      return new Date(timeB) - new Date(timeA); // 최신순으로 정렬
+    });
+
+    setFilteredBoardList(filtered);
+    setCurrentPage(1); // 카테고리 필터링 후 첫 페이지로 이동
+  };
+```
+-카테고리 필터링 기능
   <br>
 
 
