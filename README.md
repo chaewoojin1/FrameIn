@@ -107,7 +107,7 @@ https://github.com/user-attachments/assets/c551c904-4374-4239-af67-aeda5f1f5a16
 </details>
 
 
-<br>
+
 ### ✔ Chatbot 구현 ✔
 <details>
 <summary>Chatbot 구현 시연 영상</summary>
