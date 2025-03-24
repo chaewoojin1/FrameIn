@@ -100,7 +100,7 @@
 
 <details>
 <summary>게시판 페이지 구현 시안 </summary>
-<img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="700" height="400"/>
+<img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="1000" height="600"/>
 
 - 카테고리 필터링 기능
 ```
@@ -173,7 +173,7 @@
 
 <details>
 <summary>게시글 작성 페이지 구현 시안 </summary>
-<img src="https://github.com/user-attachments/assets/3a30e266-3c1a-4658-8283-b12a483c7e4d"  width="700" height="400"/>
+<img src="https://github.com/user-attachments/assets/3a30e266-3c1a-4658-8283-b12a483c7e4d"  width="1000" height="600"/>
 
 - 게시글 작성 핸들러
 
@@ -214,7 +214,7 @@
 </details>
 <details>
 <summary>게시글 수정 페이지 구현 시안 </summary>
-<img src="https://github.com/user-attachments/assets/6c82fa4e-e6d7-4937-9ec9-78dc617f5531"  width="700" height="400"/>
+<img src="https://github.com/user-attachments/assets/6c82fa4e-e6d7-4937-9ec9-78dc617f5531"  width="1000" height="600"/>
 
 - 게시글 데이터 미리 입력
 
