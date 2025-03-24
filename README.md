@@ -169,20 +169,13 @@
 
   const { rangeStart, rangeEnd } = getPaginationRange();
 ```
-  <br>
-
-
-
-  <br>
-
-<img src="이미지주소"  width="700" height="400"/>
-
-- 삭제는 다중선택삭제와 일반 삭제 가능
-- 다중선택삭제는 javascript에 selectedIds"라는 이름을 가진 input 요소 중에 체크된 것들을 모두 선택하고
-  가장 가까운 tr요소를 찾아 삭제하는 명령을 foreach함수를 써 반복하게 하여 선택삭제를 구현
-- 회원을 삭제하기 전에 사용자에게 확인 메시지를 표시하고, if else문으로 사용자의 응답에 따라 삭제를 진행
 </details>
-<br>
+
+<details>
+<summary>게시글 작성 페이지 구현 시안 </summary>
+<img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="700" height="400"/>
+
+</details>
 <br>
 
 ### ✔ Chatbot 구현 ✔
