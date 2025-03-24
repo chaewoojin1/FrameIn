@@ -110,33 +110,17 @@ https://github.com/user-attachments/assets/c551c904-4374-4239-af67-aeda5f1f5a16
 
 ### ✔ Chatbot 구현 ✔
 <details>
-<summary>Chatbot 구현 시연 영상</summary>
-![챗봇1](https://github.com/user-attachments/assets/c6519221-c178-4c66-a20e-014638340b38)
+<summary>Chatbot 기능 시연 </summary>
+  
+https://github.com/user-attachments/assets/ae579b70-872b-4846-99b8-60ed7b7efe55
+-Komoran을 사용한 챗봇 서비스
+-영화 정보,영화관 위치 정보,도움말 제공
 
 
 
 </details>
-<details>
-<summary>Chatbot 구현 시안 설명</summary>
 
-<img src="이미지주소" width="700" height="400"/>
 
-- websocket은 기존의 단방향 HTTP프로토콜과 호환되어 양방향 통신을 제공하기 위해 개발된 프로토콜
-- websocket 라이브러리를 주입하여 사용
-- configureMessageBroker() 메서드는 메시지 브로커를 설정하고 /app2가 붙으면 서버로 전송, /topic이 붙으면 클라이언트에게 메세지 보내도록 활성화
-- registerStompEndpoints() 메서드로 클라이언트와 서버간의 웹소켓 연결을 활성화
-
-<img src="이미지주소" width="700" height="400"/>
-
-- @MessageMapping() 주소로 메세지가 오면 해당 매서드가 구현되며 @Sendto() 주소로 클라이언트에게 전송
-- 처음 소켓연결시 연결이 성공하면  /app2/hello주소로 메세지를 보내 hello메서드를 실행시키도록 하여 기업소개, 상품소개를 선택할수있게 했으며 이는 topic/greetings주소로 클라이언트에게 전송
--
-<img src="이미지주소" width="700" height="400"/>
-
-- 기업소개 또는 상품소개 버튼을 클릭시 /app2/message주소로 메세지를 보내 message매서드를 실행시켜 그에대한 응답내용이 나오도록 함
-
-</details>
-<br>
 <br>
 
 ### ✔ Review 구현 ✔
