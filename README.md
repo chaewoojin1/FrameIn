@@ -22,11 +22,11 @@
   + [✔ 팀원소개 ✔](#팀원소개)
   + [✔ DB설계 ✔](#DB설계)
 * [⭐프로젝트 시안](#프로젝트-시안)
-    + [✔ 관리자 페이지 구현 ✔](#-게시판-페이지-구현-)
+    + [✔ 게시판 페이지 구현 ✔](#-게시판-페이지-구현-)
     + [✔ Chatbot 구현 ✔](#-chatbot-구현-)
     + [✔ Review 구현 ✔](#-Review-구현-)
     + [✔ ChatRoom 구현 ✔](#-ChatRoom-구현-)
-    + [✔ Security(JWT) 구현 ✔](#-Security(JWT)-구현-)
+    + [✔ Security 구현 ✔](#-Security-구현-)
 
 <br>
 
@@ -194,7 +194,7 @@
 <br>
 <br>
 
-### ✔ Security(JWT) 구현 ✔
+### ✔ Security 구현 ✔
 <details>
 <summary>Security(JWT) 시연 영상</summary>
 
