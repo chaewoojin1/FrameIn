@@ -118,6 +118,7 @@ https://github.com/user-attachments/assets/ae579b70-872b-4846-99b8-60ed7b7efe55
 
 - Komoran을 사용한 챗봇 서비스
 - 영화 정보,영화관 위치 정보,도움말 제공
+  <br>
 * 사용자의 입력 문장에서 Komoran으로 명사를 추출, Data Base에서 추출한 명사가 포함된 정보를 제공
   예)추출한 명사에 영화가 있을 경우 MovieEntity에서 다음 명사가 포함된 데이터를 찾아 제공
 
