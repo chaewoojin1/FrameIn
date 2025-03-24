@@ -169,13 +169,10 @@
 
   const { rangeStart, rangeEnd } = getPaginationRange();
 ```
-  
-
   <br>
 
 
-- 상품페이지는 param으로 subject1 subject2 seach pageable를 매겨변수를 불러와 미술/체육/음악/요리 등 카테고리별로 선택후 수강명/수강내용을 검색할수있게 select를 두개 구성
-- 검색하고 페이지네이션된 결과를 반환
+
   <br>
 
 <img src="이미지주소"  width="700" height="400"/>
