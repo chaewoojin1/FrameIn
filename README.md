@@ -101,7 +101,8 @@ https://github.com/user-attachments/assets/c551c904-4374-4239-af67-aeda5f1f5a16
 - 공지사항은 ADMIN만 작성 가능
 - 카테고리 클릭시 카테고리에 맞는 게시글 리스트 정렬(기본적으로 최신순)
 - 검색기능, 페이징 처리
-- 댓글 추가(좋아요 기능)
+- 댓글 추가
+- 좋아요 기능(좋아요 누른 사용자 확인 가능)
 - 파일 처리
 - 댓글개수,조회수,파일여부 확인 가능
 </details>
@@ -117,7 +118,8 @@ https://github.com/user-attachments/assets/ae579b70-872b-4846-99b8-60ed7b7efe55
 
 - Komoran을 사용한 챗봇 서비스
 - 영화 정보,영화관 위치 정보,도움말 제공
-
+* 사용자의 입력 문장에서 Komoran으로 명사를 추출, Data Base에서 추출한 명사가 포함된 정보를 제공
+  예)추출한 명사에 영화가 있을 경우 MovieEntity에서 다음 명사가 포함된 데이터를 찾아 제공
 
 
 </details>
@@ -129,23 +131,18 @@ https://github.com/user-attachments/assets/ae579b70-872b-4846-99b8-60ed7b7efe55
 <details>
 <summary>Review 페이지 시연 영상</summary>
 
-![리뷰1](https://github.com/user-attachments/assets/9a7887da-eca8-4454-8fc6-c8f740b666b0)
+
+https://github.com/user-attachments/assets/3cd37ab8-6e69-413e-ba6a-3b178669abe1
+
+- 로그인 안되어 있을 시 리뷰 입력창 대신 로그인 하러 가기 링크
+- 평점 추가
+- 공감 버튼(공감 누른 사용자 확인 가능)
+- 중복 리뷰 작성 불가능
+- 본인 댓글,ADMIN만 리뷰 삭제 가능
 
 
 </details>
-<details>
-<summary>강사 소개 페이지 시안 설명</summary>
 
-  <img src="이미지주소"  width="700" height="400"/>
-
-- 강사 페이지는 모든 사용자가 선생님의 프로필을 볼수있도록 한 페이지
-
-<img src="이미지주소"  width="700" height="400"/>
-
-설명
-
-</details>
-<br>
 <br>
 
 ### ✔ ChatRoom 구현 ✔
