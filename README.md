@@ -92,7 +92,10 @@
 <details>
 <summary>게시판 페이지 구현 시연 </summary>
 
-![게시판 페이지 시안영상](https://github.com/user-attachments/assets/6122f0a9-5e49-4094-801a-fe9230d65b5b)
+
+
+https://github.com/user-attachments/assets/c551c904-4374-4239-af67-aeda5f1f5a16
+
 
 - 로그인되어 있을 경우 본인 게시글 업로드,수정,삭제 가능
 - 공지사항은 ADMIN만 작성 가능
