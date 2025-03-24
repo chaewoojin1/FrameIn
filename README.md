@@ -100,8 +100,8 @@
 
 <details>
 <summary>게시판 페이지 구현 시안 </summary>
-  <img src="https://github.com/user-attachments/assets/76528a6e-8bb4-456a-aa63-5fdb54425b2a
-"  width="700" height="400"/>
+![게시판1](https://github.com/user-attachments/assets/d33a65d7-f837-49c0-9b6c-f9564e494dd8)
+
 - 로그인 필요 없이 접속 가능
 
   <br>
