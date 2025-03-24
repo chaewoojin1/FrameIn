@@ -1,90 +1,106 @@
-# 🎞Frame In
+<p align="center">
+  <img src="https://raw.githubusercontent.com/R2DSQUAD/movieproject_avengers/refs/heads/dev/frontpj/public/image/logo.png" alt="Frame In Logo" />
+</p>
+<p align="center">
+  <strong>2025.02.14 ~ 2025.03.18</strong>
+</p>
 
-<br>
-~~ <span style="background-color: #F7BE81; color:black">~~~</span>입니다.
+---
 
+## 🎬 프로젝트 소개
+**"내가 보고 싶은 영화, Frame In"**  
+자동화된 영화 데이터와 실시간 예매 시스템을 제공하는 영화 포털 플랫폼입니다.
 
-~~ <br>
-~~<br>
-~~<br>
+---
 
-~~ <br>
-~~
-<br>
+## 📌 주제
+- 자동화된 영화 데이터 및 상영 스케줄 관리 시스템  
+- 영화 전체 검색 포털 구현
 
+---
 
-## 📌 목차
+## 💡 선정 배경
+1. 기존 영화 예매 사이트는 수동으로 상영 일정을 등록하는 번거로움 존재  
+2. 최신 영화 정보와 실시간 예매 시스템의 통합 필요
 
-* [🔎프로젝트 소개](#프로젝트-소개)
-  + [✔ 프로젝트 기본설정 ✔](#프로젝트-기본설정)
-  + [✔ 기술스택 ✔](#프로젝트-기본설정)
-  + [✔ 팀원소개 ✔](#Chatbot-구현)
-  + [✔ 팀원소개 ✔](#팀원소개)
-  + [✔ DB설계 ✔](#DB설계)
-* [⭐프로젝트 시안](#프로젝트-시안)
-    + [✔ 게시판 페이지 구현 ✔](#-게시판-페이지-구현-)
-    + [✔ Chatbot 구현 ✔](#-chatbot-구현-)
-    + [✔ Review 구현 ✔](#-Review-구현-)
-    + [✔ ChatRoom 구현 ✔](#-ChatRoom-구현-)
-    + [✔ Security 구현 ✔](#-Security-구현-)
+---
 
-<br>
+## 👥 서비스 사용자
+- **일반 사용자** : 최신 박스오피스 순위 영화 예매  
+- **영화관 관리자** : 영화 상영 일정 및 데이터 관리
 
-## 🔎프로젝트 소개
+---
 
-<details>
-<summary>프로젝트 기본설정</summary>
+## 🎯 개발 목적
+1. 효율적인 영화 상영 스케줄 관리 시스템 구축  
+2. 관리자 중심의 자동화 기능 제공  
+3. 사용자 친화적인 실시간 영화 예매 시스템 구현
 
-|제목|내용|
-|------|---|
-|일정|2025/2/14~2025/3/18|
-|주제|영화 예매 사이트|
-|프로젝트명|Frame In|
-|프로그래밍 언어|JAVA|
-|프레임워크|Springboot|
-|데이터베이스|MySql8|
-|개발툴|
+---
 
+## 🔧 주요 기능
+1. **자동화된 영화 상영 스케줄 관리**  
+2. **실시간 영화 예매 기능**  
+3. **영화 검색 포털 기능**  
+4. **WebSocket, Komoran 기반 챗봇 기능**
 
-</details>
+---
 
-<details>
-<summary> 팀원소개</summary>
+## 🔍 벤치마킹
+| 참고 사이트 |
+|-------------|
+| [메가박스](https://www.megabox.co.kr/) |
+| [CGV](https://www.cgv.co.kr/) |
+| [롯데시네마](https://www.lottecinema.co.kr/) |
 
-<table>
-  <tbody>
-    <tr>
-      <th align="center"><a href=""><img src="이미지주소" width="100px;" alt=""/><br /><sub><b>FE 팀장 : 박**</b></sub></a><br /></th>
-</tr>
-<tr>
+- 기존 예매사이트 분석 및 핵심 기능 도출  
+- UI 단순화 및 예매 프로세스 개선  
+- 관리자 중심 스케줄 관리 시스템 분석  
+- 날짜 선택 시 상영 영화 및 시간 필터링 기능 구현
 
-<td>DB설계, 회원CRUD(개인정보), <br>OAuth2, Security </td>
-<td> 관리자페이지<br>, Chatbot, <br>강사소개 페이지, <br>INDEX 애니메이션 기능 </td>
-<td> 상품목록, 상품상세,<br> 장바구니(시간표), 구매, <br>구매리스트 </td>
-<td> 게시판 CRUD,<br> exception </td>
-<td> INDEX 페이지 CSS ,<br>1:1 문의내역, 덧글</td>
-</tr>
-  </tbody>
-</table>
+---
 
+## 👨‍💻 팀원 및 담당 파트
 
+| 팀원 | 담당 파트 |
+|------|-------------|
+| 👩‍💻 김** (팀장) | DB 설계, OpenAPI, 장바구니 및 결제, Security (JWT/OAuth), CI/CD |
+| 👨‍💻 강** | OpenAPI, 풀캘린더, 카카오맵 연동, 관리자 페이지 |
+| 👨‍💻 강태희 | 디자인(CSS), Git 연동, 오류 점검, 초성 검색, 예외 처리 및 기능 추가, 밸리데이션 |
+| 👨‍💻 채** | Security (JWT), WebSocket, Komoran, 게시판 CRUD, 관람평 기능 |
 
-</details>
+---
 
-<details>
-<summary>타임라인</summary>
+## 🗓 프로젝트 일정
 
-![Image](https://github.com/user-attachments/assets/bff463eb-d34f-4a3a-b847-57b2873b754a)
+| 주차 | 기간 | 주요 작업 |
+|------|----------------|---------------------------|
+| 1주차 | 2월 17일 ~ 2월 21일 | API 연동, 프론트엔드 UI 개발, 보안 설계 |
+| 2주차 | 2월 24일 ~ 2월 28일 | 관리자 페이지 개발, WebSocket 연동 |
+| 3주차 | 3월 4일 ~ 3월 10일 | 영화 스케줄링, 예매 시스템 구현 |
+| 4주차 | 3월 11일 ~ 3월 15일 | 결제 시스템 구축, UI 디자인 보완 |
+| 5주차 | 3월 17일 ~ 3월 21일 | 최종 점검, PPT 작성, 발표 준비 |
 
-</details>
+---
 
-<details>
-<summary> DB설계 </summary>
+## 💻 개발 환경
 
-![Image](https://github.com/user-attachments/assets/52ef9b51-7ebc-4282-93cb-f7a5401e548d)
+### ✅ Tech Stack
 
-</details>
-<br>
+| 분류 | 기술 스택 |
+|------|------------|
+| FrontEnd | HTML5, JavaScript, CSS, React, Redux, Redux Toolkit |
+| BackEnd | Java, Spring, Spring Security, Gradle, WebSocket, JWT, KakaoPay, KakaoMap, KakaoTalk, TossPay, KGINICIS, TMDB, KOFIC, PortOne, MySQL |
+| Tools | GitHub, Git, Notion, Docker, AWS, EC2, VSCode |
+
+### ✅ Version
+
+| 항목 | 버전 |
+|------|--------|
+| Java | 17.0.12 (2024-07-16 LTS) |
+| React | 11.14.0 |
+
+---
 
 ## ⭐프로젝트 시안
 
