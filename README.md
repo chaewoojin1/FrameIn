@@ -115,8 +115,8 @@ https://github.com/user-attachments/assets/c551c904-4374-4239-af67-aeda5f1f5a16
 https://github.com/user-attachments/assets/ae579b70-872b-4846-99b8-60ed7b7efe55
 
 
--Komoran을 사용한 챗봇 서비스
--영화 정보,영화관 위치 정보,도움말 제공
+- Komoran을 사용한 챗봇 서비스
+- 영화 정보,영화관 위치 정보,도움말 제공
 
 
 
