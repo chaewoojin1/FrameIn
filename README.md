@@ -66,8 +66,8 @@
 |------|-------------|
 | 👩‍💻 김** (팀장) | DB 설계, OpenAPI, 장바구니 및 결제, Security (JWT/OAuth), CI/CD |
 | 👨‍💻 강** | OpenAPI, 풀캘린더, 카카오맵 연동, 관리자 페이지 |
-| 👨‍💻 강태희 | 디자인(CSS), Git 연동, 오류 점검, 초성 검색, 예외 처리 및 기능 추가, 밸리데이션 |
-| 👨‍💻 채** | Security (JWT), WebSocket, Komoran, 게시판 CRUD, 관람평 기능 |
+| 👨‍💻 강** | 디자인(CSS), Git 연동, 오류 점검, 초성 검색, 예외 처리 및 기능 추가, 밸리데이션 |
+| 👨‍💻 채우진 | Security (JWT), WebSocket, Komoran, 게시판 CRUD, 관람평 기능 |
 
 ---
 
