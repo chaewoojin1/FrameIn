@@ -105,8 +105,9 @@
 - 로그인 필요 없이 접속 가능
 
   <br>
+![게시판1](https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6)
 
-<img src="이미지주소"  width="700" height="400"/>
+<img src="https://github.com/user-attachments/assets/5599e421-7d35-4854-8cef-2c0e6b0e3ac6"  width="700" height="400"/>
 
 - 상품페이지는 param으로 subject1 subject2 seach pageable를 매겨변수를 불러와 미술/체육/음악/요리 등 카테고리별로 선택후 수강명/수강내용을 검색할수있게 select를 두개 구성
 - 검색하고 페이지네이션된 결과를 반환
