@@ -80,7 +80,7 @@
 <details>
 <summary> DB설계 </summary>
 
-![image](이미지주소)
+![Image](https://github.com/user-attachments/assets/52ef9b51-7ebc-4282-93cb-f7a5401e548d)
 
 </details>
 <br>
