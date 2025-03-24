@@ -1,4 +1,4 @@
-# 🛍Frame In🛍
+# 🛍Frame In
 
 <br>
 ~~ <span style="background-color: #F7BE81; color:black">~~~</span>입니다.
@@ -89,17 +89,18 @@
 ![image](이미지주소)
 <br>
 
-### ✔ 관리자 페이지 구현 ✔
+### ✔ 게시판 페이지 구현 ✔
 <details>
-<summary>관리자 페이지 구현 시연 영상</summary>
+<summary>게시판 페이지 구현 시연 영상</summary>
 
 
-![관리자 페이지 시안영상](영상주소)
+![게시판 페이지 시안영상](https://github.com/user-attachments/assets/6122f0a9-5e49-4094-801a-fe9230d65b5b)
+
 
 </details>
 
 <details>
-<summary>관리자 페이지 구현 시안 </summary>
+<summary>게시판 페이지 구현 시안 </summary>
   <img src="이미지주소"  width="700" height="400"/>
 
 - Spring Security의  권한이 admin일때만 관리자페이지에 접속 가능
