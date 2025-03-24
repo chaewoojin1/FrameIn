@@ -108,9 +108,7 @@
 ### ✔ Chatbot 구현 ✔
 <details>
 <summary>Chatbot 구현 시연 영상</summary>
-![chatBot](https://github.com/user-attachments/assets/fe60f6bd-6635-4dc0-97f2-3b7bed38385e)
-
-
+![챗봇1](https://github.com/user-attachments/assets/c6519221-c178-4c66-a20e-014638340b38)
 
 
 
