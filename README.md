@@ -73,7 +73,7 @@
 <details>
 <summary> 타임라인</summary>
 
-![Image](https://github.com/user-attachments/assets/348503cf-78e8-4b75-a73d-b3d30122a1d7)
+![Image](https://github.com/user-attachments/assets/eb563c22-3d4f-4be8-a169-c17fba2083db)
 
 </details>
 
