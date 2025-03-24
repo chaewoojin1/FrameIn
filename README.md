@@ -146,7 +146,7 @@
 
 ```
 - 페이징 처리
-  ```
+```
    const indexOfLastMessage = currentPage * messagesPerPage;
   const indexOfFirstMessage = indexOfLastMessage - messagesPerPage;
   const currentMessages =
@@ -168,7 +168,7 @@
   };
 
   const { rangeStart, rangeEnd } = getPaginationRange();
-  ```
+```
   
 
   <br>
