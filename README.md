@@ -73,7 +73,7 @@
 <details>
 <summary> 타임라인</summary>
 
-![image](이미지주소)
+![Image](https://github.com/user-attachments/assets/348503cf-78e8-4b75-a73d-b3d30122a1d7)
 
 </details>
 
